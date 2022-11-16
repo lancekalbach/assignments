@@ -1,0 +1,70 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#top {
+    display: grid;
+    background-color: bisque;
+    text-align: center;
+}
+
+#info {
+    background-color: gray;
+    text-align: center;
+}
+
+#nav1 {
+    display:grid;
+    background-color: black;
+    color: bisque;
+    width: 100px;
+    text-align: center;
+}
+
+#nav2 {
+    display: grid;
+    position:absolute;
+    top:0px;
+    left: 100px;
+    background-color: black;
+    color: bisque;
+    width: 100px;
+    text-align: center;
+}
+
+body {
+    background-color: lightblue;
+}
+
+#mtb1 {
+    display: grid;
+    width: 100%;
+
+}
+
+#ski1 {
+    position: absolute;
+    top: 113px;
+    width: 500px;
+    height: 200px;
+}
+
+#links{
+    text-align: center;
+}
+
+#ski2 {
+    position:absolute;
+    top:314px;
+    width: 350px;
+    height: 200px;
+}
+
+#email{
+    text-align: center;
+}
+
+#phone{
+    text-align: center;
+}
