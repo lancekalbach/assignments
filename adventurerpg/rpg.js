@@ -7,7 +7,7 @@ let inventory = ["Torch"]
 enemyName = ["Snake", "Rat", "Bat"]
 
 function cave(){
-    const playerDmg = Math.floor(Math.random() * (8 - 1) + 2)
+    const playerDmg = Math.floor(Math.random() * (8 - 1) + 3)
     console.log(playerDmg)
     const enemies = enemyName[Math.floor(Math.random() * enemyName.length)]
     let enemyHealth = 10
@@ -34,6 +34,7 @@ if(run < .5) {
     console.log("You escaped the enemy!")
     break
 } case "attack":
+
 playerHealth -= enemyDmg
     console.log(nameQ+ ", you chose to attack. You did " +playerDmg+ " damage to " +enemies)
 enemyHealth -= playerDmg
@@ -62,11 +63,10 @@ if(playerHealth <= 0){
     }
 }
 while(playerHealth > 0){
-    restore = function(){
-       // active = true
-        playerHealth = 11
+    play = function(){
+    playerHealth = 11
     };
-    restore()
+    play()
     cave()
 }
 

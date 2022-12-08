@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="travel.css">
+</head>
+<body>
+    <h1>Welcome to Lance Airlines! We need information from you so we don't forget about you :)</h1>
+    <div>
+        <form name="info">
+            <input name = "firstN" type="text" required placeholder="First Name">
+            <input name = "lastN" type="text" required placeholder="Last Name">
+            <input name="age" type="number" required placeholder="Age">
+            <br>
+            Male: <input name="gender" type="radio" value="Male">
+            <br>
+            Female: <input name="gender" type="radio" value="Female">
+
+            <br>
+            Destination: <select name="location">
+                <option value="Florida">Florida</option>
+                <option value="Washington">Washington</option>
+                <option value="California">California</option>
+            </select>
+            
+            <br>
+            Please select your dietary restrictions:
+            <br>
+            Vegan:<input name="vegan" type="checkbox" value="Vegan">
+            <br>
+            Lactose Intolerant<input name="lactose" type="checkbox" value="Lactose Intolerant"> 
+            <br>
+            Nuts:<input name="nuts" type="checkbox" value="Nuts">
+            <br>
+            <button class="btn">Submit</button>
+        </form>
+    </div>
+    <img class="airplane" src="sunsetplane.jpg">
+    <script src="travel.js"></script>
+</body>
+</html>

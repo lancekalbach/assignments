@@ -1,4 +1,4 @@
-var people = ["Jon", "Jacob", "Jingle", "Heimer", "Schmidt"]
+var people = ["John", "Jacob", "Jingle", "Heimer", "Schmidt"]
 var alphabet = "abcdefghijklmnopqrstuvwxyz"
 
 function forception(people, alphabet){
