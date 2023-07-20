@@ -1,0 +1,14 @@
+.dark-theme {
+    background-color: gray;
+    color: white;
+}
+
+.light-theme {
+    background-color: white;
+    color: gray;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+}

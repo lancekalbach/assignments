@@ -1,0 +1,50 @@
+body {
+    margin: 0%;
+    padding: 0%;
+}
+
+.header {
+    background-color: gray;
+    width: 70vw;
+    height: 50px;
+    font-size: 130%;
+    border-radius: 5px;
+}
+
+.badge--box {
+    display: grid;
+}
+
+.badge {
+    margin-top: 50px;
+    border-style: solid;
+    width: 70vw;
+    margin-inline-start: 190px;
+}
+
+.form {
+    margin-inline-start: 0px;
+    border-style: solid;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about {
+    border-style: solid;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+button {
+    background-color: green;
+}
+
+input {
+    background-color: moccasin;
+}
+
+textarea {
+    background-color: moccasin;
+}

@@ -1,0 +1,52 @@
+* {
+    padding: 0%;
+    margin: 0%;
+}
+
+body {
+    background-color: gray;
+}
+
+.friend-pet--list {
+    line-height: 2em;
+    display: flex;
+    justify-content: space-between;
+    width:90%;
+    margin-inline-start: 50px;
+    margin-top: 50px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.friend--name {
+    font-size: 200%;
+}
+
+.friend--age {
+    font-size: 150%;
+}
+
+.pet--list--p {
+    text-transform: capitalize;
+    font-size: 120%;
+}
+
+.age--ital {
+    font-style: italic;
+}
+
+.list--background--change {
+    transform: background-color;
+    width: 250px;
+    height: 500px
+}
+
+.list--background--change:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.underline {
+    text-decoration: underline;
+}
