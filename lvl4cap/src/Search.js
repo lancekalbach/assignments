@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 const Search = () => {
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState('')
   const [meals, setMeals] = useState([]);
-  const [displayedMeals, setDisplayedMeals] = useState([]);
-  const [showMore, setShowMore] = useState(false);
-  const [showLess, setShowLess] = useState(false);
-  const [selectedMeal, setSelectedMeal] = useState(null);
-  const [showIngredients, setShowIngredients] = useState(false);
+  const [displayedMeals, setDisplayedMeals] = useState([])
+  const [showMore, setShowMore] = useState(false)
+  const [showLess, setShowLess] = useState(false)
+  const [selectedMeal, setSelectedMeal] = useState(null)
+  const [showIngredients, setShowIngredients] = useState(false)
 
   const handleSearch = async (e) => {
     e.preventDefault()
@@ -16,37 +16,37 @@ const Search = () => {
       const response = await axios.get(
         `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchTerm}`
       );
-      const foundMeals = response.data.meals || [];
+      const foundMeals = response.data.meals || []
       setMeals(foundMeals);
-      setDisplayedMeals(foundMeals.slice(0, 6)); // Display only the first 6 meals
-      setShowMore(foundMeals.length > 6); // Show the "more" option if there are more than 6 meals
-      setShowLess(false); // Hide the "show less" option initially
-      setSelectedMeal(null); // Reset selected meal when a new search is performed
-      setShowIngredients(false); // Hide the ingredients when a new search is performed
+      setDisplayedMeals(foundMeals.slice(0, 6)) // show the first 6 meals
+      setShowMore(foundMeals.length > 6) // show the more option if there are more than 6
+      setShowLess(false); // hide the show less option
+      setSelectedMeal(null); // reset selected meal when a new search is performed
+      setShowIngredients(false); // hide the ingredients when a new search is performed
     } catch (error) {
-      console.error(error);
+      console.error(error)
     }
   }
 
   const handleShowMore = () => {
-    setDisplayedMeals(meals); // Display all meals
-    setShowMore(false); // Hide the "more" option
-    setShowLess(true); // Show the "show less" option
+    setDisplayedMeals(meals) // displays all meals
+    setShowMore(false) // hides the more option
+    setShowLess(true) // shows the show less option
   }
 
   const handleShowLess = () => {
-    setDisplayedMeals(meals.slice(0, 6)); // Display only the first 6 meals
-    setShowMore(true); // Show the "more" option
-    setShowLess(false); // Hide the "show less" option
+    setDisplayedMeals(meals.slice(0, 6)) // Displays the first 6 meals
+    setShowMore(true); // Shows the more option
+    setShowLess(false); // Hides the show less option
   }
 
   const handleShowIngredients = (meal) => {
     setSelectedMeal(meal); // Set the selected meal
-    setShowIngredients(true); // Show the ingredients for the selected meal
+    setShowIngredients(true); // Shows the ingredients for the selected meal
   }
 
   const handleHideIngredients = () => {
-    setShowIngredients(false); // Hide the ingredients
+    setShowIngredients(false); // Hides the ingredients
   };
 
   return (
@@ -82,8 +82,8 @@ const Search = () => {
           <img className="meal-img" src={selectedMeal.strMealThumb} alt={selectedMeal.strMeal} />
           <h4>Ingredients:</h4>
           <ul>
-            {Object.entries(selectedMeal)
-              .filter(([key, value]) => key.startsWith('strIngredient') && value)
+            {Object.entries(selectedMeal) //turning the selectedMeal into an array of key value pairs
+              .filter(([key, value]) => key.startsWith('strIngredient') && value) //checks each pair to see if the key starts with the string strIngredient and if the value is truthy 
               .map(([key, value]) => (
                 <li key={key}>{value}</li>
               ))}

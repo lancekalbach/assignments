@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 
 function Meals() {
   const [categories, setCategories] = useState([]);
-  const [visibleCategories, setVisibleCategories] = useState(15);
 
   useEffect(() => {
     fetchCategories();
@@ -18,36 +17,20 @@ function Meals() {
     }
   };
 
-  const handleShowMore = () => {
-    setVisibleCategories(prevVisibleCategories => prevVisibleCategories + 15);
-  };
-
-  const handleShowLess = () => {
-    setVisibleCategories(prevVisibleCategories => prevVisibleCategories - 15);
-  };
-
   return (
     <div className='category-back'>
       <h1 className='category-title'>Category List</h1>
       <div className="category-container">
-        {categories.slice(0, visibleCategories).map(category => (
-      <div key={category.strCategory} className="category-item">
-        <img src={category.strCategoryThumb} alt={category.strCategory} width="200" height="200" />
-        <div className="category-name">{category.strCategory}</div>
-      </div>
-  ))}
-</div>
-
-      <div>
-        {visibleCategories < categories.length && (
-          <button onClick={handleShowMore}>Show More</button>
-        )}
-        {visibleCategories > 15 && (
-          <button onClick={handleShowLess}>Show Less</button>
-        )}
+        {categories.map(category => (
+          <div key={category.strCategory} className="category-item">
+            <img src={category.strCategoryThumb} alt={category.strCategory}/>
+            <div className="category-name">{category.strCategory}</div>
+          </div>
+        ))}
       </div>
     </div>
   );
 }
 
 export default Meals;
+
