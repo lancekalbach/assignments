@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+body {
+    background-color: white;
+    background-image: url("backimg.jpg");
+    background-size: cover;
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(Borel/Borel-Regular.ttf);
+}
+
+h3 {
+    margin: 5px;
+}
+
+p {
+    margin: 5px
+}
+
+form {
+    border: 1px solid #333;
+    padding: 10px;
+    margin: 5px;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    margin: 5px;
+}
+
+button {
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.delete-btn {
+    background-color: firebrick;
+    color: whitesmoke;
+}
+
+.edit-btn {
+    background-color: cornflowerblue;
+    color: whitesmoke;
+}
+
+.request-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 32px;
+}
+
+.request {
+    border: 1px solid #333;
+    padding: 10px;
+    margin: 5px;
+}
+
+.filter-form {
+    width: 200px;
+}
+
+.approve-btn {
+    background-color: lightgreen;
+    color: whitesmoke;
+}
+
+.deny-btn {
+    background-color: firebrick;
+    color: whitesmoke;
+}
+
+.form-submit {
+    background-color: orange;
+    color: whitesmoke;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-link {
+    color: #333;
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: bold;
+    font-size: 150%;
+    font-family: myFirstFont;
+    margin-left: 10px;
+  }
+  
+  .home-link:hover {
+    color: gray;
+  }
+  
+  .request-link {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 150%;
+    font-family: myFirstFont;
+    margin-right: 10px;
+  }
+  
+  .request-link:hover {
+    color: gray;
+  }
+
+  .welcome-home-page {
+    font-family: myFirstFont;
+    text-align: center;
+    margin-top: 20%;
+    font-size: 300%;
+    color: #333;
+  }
+
+  .pending-btn {
+    background-color: rgb(230, 113, 113);
+  }
+
+  .approval-container {
+    border: 1px solid #333;
+    padding: 10px;
+    margin: 5px;
+    background-color: rgb(230, 113, 113);
+  }
+  
+  .approved {
+    background-color: lightgreen;
+  }
